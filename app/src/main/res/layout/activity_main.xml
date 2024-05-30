@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:id="@+id/fristcard"
+         android:layout_height="350dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_margin="10dp"
+         app:cardCornerRadius="20dp">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#deaded">
+
+             <TextView
+                 android:id="@+id/textview"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="16dp"
+                 android:textSize="40dp"
+                 android:text="BMI Calculator"
+                 android:textColor="@color/white"
+                 android:textAlignment="center"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.498"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <EditText
+                 android:id="@+id/edittext"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textAlignment="center"
+                 android:textSize="20dp"
+                 android:inputType="numberDecimal"
+                 android:layout_marginStart="60dp"
+                 android:layout_marginTop="96dp"
+                 android:hint="Weight (Kgs)"
+                 android:textColor="@color/white"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+             <EditText
+                 android:id="@+id/edittext1"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textAlignment="center"
+                 android:textSize="20dp"
+                 android:layout_marginTop="96dp"
+                 android:inputType="numberDecimal"
+                 android:layout_marginEnd="60dp"
+                 android:hint="Height (Meter)"
+                 android:textColor="@color/white"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="1.0"
+                 app:layout_constraintStart_toEndOf="@+id/edittext"
+                 app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+             <Button
+                 android:id="@+id/button"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="76dp"
+                 android:text="Calculate"
+                 android:textColor="@color/white"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.485"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/edittext" />
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+     </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fristcard"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/backcard"
+            android:layout_height="match_parent"
+            android:background="#b18abd">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="BMI Measurement"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/white"
+                android:id="@+id/textview3"
+                android:textStyle="bold"
+                android:textSize="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
